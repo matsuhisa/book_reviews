@@ -22,10 +22,11 @@
 - 口コミの一覧
 - 口コミの詳細
 
-# rails generate scaffold
+# rails generate scaffold, controller
 
 ```
 rails generate scaffold Book title:string description:text author:string asin:string
 rails generate scaffold Review title:string description:text user_id:integer book_id:integer
 rails generate scaffold User email:string
+rails generate controller welcome
 ```
