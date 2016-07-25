@@ -27,6 +27,6 @@
 ```
 rails generate scaffold Book title:string description:text author:string asin:string
 rails generate scaffold Review title:string description:text user_id:integer book_id:integer
-rails generate scaffold User email:string
+rails generate scaffold User name:string login_id:string email:string comment:text enabled:integer
 rails generate controller welcome
 ```
