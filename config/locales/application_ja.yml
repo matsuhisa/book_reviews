@@ -1,0 +1,16 @@
+ja:
+  date:
+    formats:
+      mmdd_dow: "%-m月%-d日（%a）"
+      mmdd_dow_slash: "%-m/%-d（%a）"
+      yyyymmdd_dow: "%Y年%-m月%-d日（%a）"
+      yyyymmdd: "%Y年%-m月%-d日"
+      yyyymm: "%Y年%-m月"
+      yyyymmdd_dot: "%Y.%m.%d"
+      yyyymmdd_slash: "%Y/%m/%d"
+  time:
+    formats:
+      yyyymmddhhmm_slash: "%Y/%m/%d/ %H:%M"
+  datetime:
+    formats:
+      yyyymmddhhmm_slash: "%Y/%m/%d/ %H:%M"
