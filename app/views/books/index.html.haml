@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th
       %th Title
       %th Description
       %th Author
@@ -12,8 +13,9 @@
       %th
 
   %tbody
-    - @books.each do |book|
+    - @books.each.with_index(1) do |book, index|
       %tr
+        %td #{index}
         %td= book.title
         %td= book.description
         %td= book.author
