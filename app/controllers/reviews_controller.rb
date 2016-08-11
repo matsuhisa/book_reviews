@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  permits :title, :description, :user_id, :book_id
+  permits :title, :description, :completion_at, :user_id, :book_id
 
   # GET /reviews
   def index
