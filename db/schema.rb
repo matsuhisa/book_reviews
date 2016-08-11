@@ -23,12 +23,13 @@ ActiveRecord::Schema.define(version: 20160725153848) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",         null: false
     t.text     "description"
-    t.integer  "user_id"
-    t.integer  "book_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.date     "completion_at", null: false
+    t.integer  "user_id",       null: false
+    t.integer  "book_id",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
