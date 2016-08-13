@@ -5,3 +5,16 @@
 %p= image_tag current_user[:image], size: '100x100'
 
 %p= link_to "sing out", sign_out_path, method: :delete
+
+%table
+  %thead
+    %tr
+      %th
+      %th Title
+      %th Author
+  %tbody
+    - @books.each.with_index(1) do |book, index|
+      %tr
+        %td= image_tag book.amazon_image_url
+        %td= link_to book.title, book
+        %td= book.author
