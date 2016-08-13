@@ -14,6 +14,14 @@
   %b Asin:
   = @book.asin
 
+- if @book.reviews.any?
+  %h2 #{@book.title}の口コミ一覧
+  %ul
+    - @book.reviews.each do |review|
+      %li= link_to review.title, review
+- else
+  口コミは未だありません
+
 = link_to 'Edit', edit_book_path(@book)
 \|
 = link_to 'Back', books_path
