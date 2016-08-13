@@ -1,9 +1,9 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @book.title
+%h1= @book.title
+
 %p= image_tag @book.amazon_image_url
+
 %p
   %b Description:
   = @book.description
