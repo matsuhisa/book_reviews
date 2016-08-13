@@ -16,10 +16,10 @@
     = f.label :completion_at
     = f.date_field :completion_at
   .field
+    = f.label :book_id
+    = f.collection_select :book_id, @books, :id, :title
+  .field
     = f.label :user_id
     = f.number_field :user_id
-  .field
-    = f.label :book_id
-    = f.number_field :book_id
   .actions
     = f.submit 'Save'
