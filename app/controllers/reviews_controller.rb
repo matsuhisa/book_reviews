@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_books, only: [:new, :edit]
   permits :title, :description, :completion_at, :user_id, :book_id
 
   # GET /reviews
@@ -14,7 +15,6 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
-    @books = Book.all
   end
 
   # GET /reviews/1/edit
@@ -52,5 +52,9 @@ class ReviewsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_review(id)
       @review = Review.find(id)
+    end
+
+    def set_books
+      @books = Book.all
     end
 end
