@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:edit, :update, :destroy]
   permits :title, :description, :author, :asin
 
   # GET /books
@@ -8,7 +8,8 @@ class BooksController < ApplicationController
   end
 
   # GET /books/1
-  def show
+  def show(id)
+    @book = Book.includes(:reviews).find(id)
   end
 
   # GET /books/new
