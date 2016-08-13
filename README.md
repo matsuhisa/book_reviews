@@ -58,6 +58,12 @@
 - 仮）heroku で公開できるようにする（社内向けツールであれば...）
 - 仮）CircleCI でテスト実施
 
+# Google API OAuth2.0
+
+- http://qiita.com/giiko_/items/b0b2ff41dfb0a62d628b
+- 2016年08月12日現在、取得必須になっています
+
+
 ---
 
 # 機能概要
