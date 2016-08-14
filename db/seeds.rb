@@ -1,3 +1,6 @@
+# root user
+User.create(id: 1, login_id: 'admin', nickname: "管理者", authorization: 0, enabled: 1)
+
 # Book
 [
   { title: "イズムの功過", author: "夏目漱石", asin: "B009AJ8UMW" },
