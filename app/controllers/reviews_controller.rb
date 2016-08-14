@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :require_sign_in, only: [:new, :edit, :update, :destroy]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_books, only: [:new, :edit]
   permits :title, :description, :completion_at, :user_id, :book_id

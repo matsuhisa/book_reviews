@@ -5,14 +5,12 @@
 %p= image_tag @book.amazon_image_url
 
 %p
-  %b Description:
-  = @book.description
-%p
   %b Author:
   = @book.author
+
 %p
-  %b Asin:
-  = @book.asin
+  %b Description:
+  = @book.description
 
 - if @book.reviews.any?
   %h2 #{@book.title}の口コミ一覧
@@ -20,8 +18,13 @@
     - @book.reviews.each do |review|
       %li= link_to review.title, review
 - else
-  口コミは未だありません
+  %h2 口コミは未だありません
 
-= link_to 'Edit', edit_book_path(@book)
-\|
-= link_to 'Back', books_path
+- if signed_in?
+  %h2 口コミを投稿する
+  %p= link_to "口コミを投稿する", new_review_url
+- else
+  %h2 口コミを投稿しませんか？
+  %p= link_to "sign_in", sign_in_url
+
+%p= link_to 'Back', books_path
