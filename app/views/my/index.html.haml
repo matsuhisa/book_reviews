@@ -1,0 +1,17 @@
+%h1 マイページ
+
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Book
+      %th
+      %th
+  %tbody
+    - @reviews.each do |review|
+      %tr
+        %td= review.title
+        %td= review.book.title
+        %td= link_to 'Show', review
+        %td= link_to 'Edit', edit_review_path(review)
