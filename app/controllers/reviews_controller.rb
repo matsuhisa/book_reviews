@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    @reviews = Review.active.all
   end
 
   # GET /reviews/1
