@@ -16,8 +16,8 @@
       %tr
         %td= review.title
         %td= review.description
-        %td= review.user_id
-        %td= review.book.title
+        %td= review.user.nickname
+        %td= link_to review.book.title, review.book
         %td= link_to 'Show', review
         %td= link_to 'Edit', edit_review_path(review)
         %td= link_to 'Destroy', review, :method => :delete, :data => { :confirm => 'Are you sure?' }
