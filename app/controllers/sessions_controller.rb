@@ -1,16 +1,18 @@
+require_dependency "application_controller"
+
 class SessionsController < ApplicationController
   skip_before_action :require_sign_in
 
   def new
+    # sign_in 画面
   end
 
   def create
     original_url = session[:original_url]
     reset_session
 
-    session[:user_id] = auth_hash[:info][:email]
-    session[:user_image] = auth_hash[:info][:image]
-    session[:name] = auth_hash[:info][:name]
+    self.current_user = User.find_or_create_user(auth_hash[:info])
+    self.user_image = auth_hash[:info][:image]
 
     redirect_to original_url || root_path
   end

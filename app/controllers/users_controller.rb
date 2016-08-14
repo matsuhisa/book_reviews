@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  permits :name, :login_id, :email, :comment, :enabled
+  permits :nickname, :login_id, :email, :comment, :enabled
 
   # GET /users
   def index

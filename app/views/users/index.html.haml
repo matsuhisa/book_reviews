@@ -3,11 +3,11 @@
 %table
   %thead
     %tr
-      %th Name
       %th Login
-      %th Email
+      %th NickName
       %th Comment
       %th Enabled
+      %th Authorization
       %th
       %th
       %th
@@ -15,11 +15,11 @@
   %tbody
     - @users.each do |user|
       %tr
-        %td= user.name
         %td= user.login_id
-        %td= user.email
+        %td= user.nickname
         %td= user.comment
         %td= user.enabled
+        %td= user.authorization
         %td= link_to 'Show', user
         %td= link_to 'Edit', edit_user_path(user)
         %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
