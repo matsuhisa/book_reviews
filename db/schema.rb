@@ -33,15 +33,14 @@ ActiveRecord::Schema.define(version: 20160725153848) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "login_id",                  null: false
-    t.string   "email",                     null: false
-    t.string   "nickname",                  null: false
+    t.string   "login_id",                   null: false
+    t.string   "nickname",                   null: false
+    t.string   "user_image_url"
     t.text     "comment"
-    t.integer  "cooperation",   default: 0, null: false
-    t.integer  "authorization", default: 0, null: false
-    t.integer  "enabled",       default: 0, null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.integer  "authorization",  default: 1, null: false
+    t.integer  "enabled",        default: 1, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end

@@ -1,5 +1,5 @@
 # root user
-User.create(id: 1, login_id: 'admin', nickname: "管理者", authorization: 0, enabled: 1)
+User.create(id: 1, login_id: 'root', nickname: "管理者", authorization: 0, enabled: 1)
 
 # Book
 [
