@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :user_image, :signed_in?
-  before_action :require_sign_in
 
   def current_user
     @_current_user ||= begin

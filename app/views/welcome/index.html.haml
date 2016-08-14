@@ -1,9 +1,11 @@
 %h1 Welcome
 
-%P= current_user.login_id
-%p= image_tag current_user.user_image_url, size: '100x100'
+- if signed_in?
+  %P= current_user.login_id
+  %p= image_tag current_user.user_image_url, size: '100x100'
+  %p= link_to "sing out", sign_out_path, method: :delete
 
-%p= link_to "sing out", sign_out_path, method: :delete
+%h2 書籍一覧
 
 %table
   %thead

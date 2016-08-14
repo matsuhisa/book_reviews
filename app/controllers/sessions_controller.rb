@@ -1,6 +1,7 @@
 require_dependency "application_controller"
 
 class SessionsController < ApplicationController
+  before_action :require_sign_in
   skip_before_action :require_sign_in
 
   def new
