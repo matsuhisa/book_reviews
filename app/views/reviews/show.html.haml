@@ -11,7 +11,8 @@
   = @review.user_id
 %p
   %b Book:
-  = @review.book_id
+  = @review.book.title
+%p= @review.deleted_at
 
 = link_to 'Edit', edit_review_path(@review)
 \|

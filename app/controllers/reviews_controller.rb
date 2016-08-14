@@ -44,8 +44,7 @@ class ReviewsController < ApplicationController
 
   # DELETE /reviews/1
   def destroy
-    @review.destroy
-
+    @review.update_attributes(deleted_at: Time.current)
     redirect_to reviews_url, notice: 'Review was successfully destroyed.'
   end
 
