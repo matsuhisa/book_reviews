@@ -4,7 +4,8 @@
 
 # 課題
 
-- [ ] herokuへのデプロイ
+- [x] herokuへのデプロイ
+  - https://secure-fjord-21755.herokuapp.com/
 - [ ] 価値仮説について未記載
 - [ ] ユーザー登録
  - facebook、twitter認証いる？
@@ -71,6 +72,7 @@
 
 # Google API OAuth2.0
 
+- https://github.com/zquestz/omniauth-google-oauth2
 - http://qiita.com/giiko_/items/b0b2ff41dfb0a62d628b
 - 2016年08月12日現在、取得必須になっています
 
