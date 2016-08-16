@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 gem 'rails', '~> 4.2.6'
-gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -22,15 +21,19 @@ gem 'active_decorator'
 
 group :development, :test do
   gem 'byebug'
-
   gem 'quiet_assets'
-
   gem 'pry-byebug'
   gem 'pry-doc', require: false
   gem 'pry-rails'
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'web-console'
   gem 'spring'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
