@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
 gem 'rails', '~> 4.2.6'
+gem 'puma'
+
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
