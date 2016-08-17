@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title BookReviews
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+
+    .global_navi
+    - if signed_in?
+      %span= current_user.login_id
+      %span= link_to "sing out", sign_out_path, method: :delete
+    - else
+      %span= link_to "Googleアカウントでサインイン", "/auth/google_oauth2"
+
+    = yield
