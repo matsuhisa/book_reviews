@@ -9,10 +9,12 @@
   %body
 
     .global_navi
-    - if signed_in?
-      %span= current_user.login_id
-      %span= link_to "sing out", sign_out_path, method: :delete
-    - else
-      %span= link_to "Googleアカウントでサインイン", "/auth/google_oauth2"
+      .title= link_to 'BookReviews', root_path
+      .user
+      - if signed_in?
+        %span= current_user.login_id
+        %span= link_to "sing out", sign_out_path, method: :delete
+      - else
+        %span= link_to "Googleアカウントでサインイン", "/auth/google_oauth2"
 
     = yield
