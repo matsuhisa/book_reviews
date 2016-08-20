@@ -1,6 +1,6 @@
 class Review < ActiveRecord::Base
   belongs_to :book
-  belongs_to :user
+  belongs_to :user, -> {active}
 
   scope :active, -> { published.where(deleted_at: nil) }
 
