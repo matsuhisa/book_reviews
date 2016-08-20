@@ -3,16 +3,16 @@
 %p
   %b Name:
   = @user.nickname
-%p
-  %b Login:
-  = @user.login_id
-%p
-  %b Comment:
-  = @user.comment
-%p
-  %b Enabled:
-  = @user.enabled
 
-= link_to 'Edit', edit_user_path(@user)
-\|
+%table
+  %thead
+    %tr
+      %th Title
+      %th Book
+  %tbody
+    - @reviews.each do |review|
+      %tr
+        %td= link_to review.title, review
+        %td= link_to review.book.title, review.book
+
 = link_to 'Back', users_path

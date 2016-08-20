@@ -4,11 +4,12 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.active.member.all
   end
 
   # GET /users/1
   def show
+    @reviews = Review.joins(:book).where(user_id: @user.id)
   end
 
   # GET /users/new
