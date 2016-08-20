@@ -9,8 +9,10 @@
 - [ ] 価値仮説について未記載
 - [ ] ユーザー登録
  - facebook、twitter認証いる？
+ - line 認証できたら面白い？
 - [ ] 見た目の調整
  - bootstrap？
+ - 自作する？
 
 ----
 
@@ -149,4 +151,5 @@ rails generate scaffold Book title:string description:text author:string asin:st
 rails generate scaffold Review title:string description:text completion_at:date user_id:integer book_id:integer
 rails generate scaffold User name:string login_id:string email:string comment:text enabled:integer
 rails generate controller welcome
+rails generate controller my
 ```
