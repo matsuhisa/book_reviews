@@ -20,6 +20,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    # FIXME 書いた人とログインユーザが違う時、404にする？サイトトップに戻しちゃう？か決めて実装する
+    if @review.user_id != current_user.id
+    end
   end
 
   # POST /reviews
@@ -35,6 +38,7 @@ class ReviewsController < ApplicationController
 
   # PUT /reviews/1
   def update(review)
+    review[:user_id] = @review.user_id
     if @review.update(review)
       redirect_to @review, notice: 'Review was successfully updated.'
     else
