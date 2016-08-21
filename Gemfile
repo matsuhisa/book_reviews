@@ -21,6 +21,8 @@ gem 'omniauth-google-oauth2'
 gem 'action_args'
 gem 'active_decorator'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
