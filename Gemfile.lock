@@ -79,6 +79,9 @@ GEM
       railties (>= 4.0.1)
     haml_parser (0.4.1)
     hashie (3.4.4)
+    html-pipeline (2.4.1)
+      activesupport (>= 2, < 5)
+      nokogiri (>= 1.4)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -235,6 +238,7 @@ DEPENDENCIES
   dotenv-rails
   faml
   haml-rails
+  html-pipeline
   jbuilder
   jquery-rails
   kaminari
