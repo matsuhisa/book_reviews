@@ -22,7 +22,9 @@ gem 'action_args'
 gem 'active_decorator'
 
 gem 'kaminari'
+
 gem 'html-pipeline'
+gem 'github-markdown'
 
 group :development, :test do
   gem 'byebug'
