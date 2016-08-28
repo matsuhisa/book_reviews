@@ -1,8 +1,9 @@
 module ReviewDecorator
 
   def description_output
-    filter = HTML::Pipeline::MarkdownFilter.new(description)
-    filter.call.html_safe
+    pipeline = HTML::Pipeline.new([HTML::Pipeline::MarkdownFilter])
+    result = pipeline.call(description)
+    result[:output].to_s.html_safe
   end
 
 end
