@@ -4,16 +4,16 @@
 
 # 課題
 
+- [ ] 価値仮説について未記載
 - [x] herokuへのデプロイ
   - https://secure-fjord-21755.herokuapp.com/
-- [ ] 価値仮説について未記載
 - [ ] ユーザー登録
- - facebook、twitter認証いる？
- - line 認証できたら面白い？
+ - Google oAuth2
 - [ ] 見た目の調整
- - bootstrap？
- - 自作する？
-- [ ] Markdownで書ける
+ - Material Design Lite の利用
+- [ ] Markdownで口コミが書ける
+ - はてな記法っぽいもの
+
 ----
 
 ## アプリケーション作成の目的
@@ -26,8 +26,6 @@
 - 同じ本の口コミを読める
 
 ## 価値仮説
-
-
 
 ## URL設計
 
@@ -76,8 +74,6 @@
 
 - https://github.com/zquestz/omniauth-google-oauth2
 - http://qiita.com/giiko_/items/b0b2ff41dfb0a62d628b
-- 2016年08月12日現在、取得必須になっています
-
 
 ---
 
