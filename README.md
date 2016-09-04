@@ -13,7 +13,9 @@
  - Material Design Lite の利用
 - [ ] Markdownで口コミが書ける
  - はてな記法っぽいもの
-
+- [ ] テストを書く
+ - rspec
+- [ ] rubocopの導入
 ----
 
 ## アプリケーション作成の目的
