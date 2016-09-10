@@ -9,6 +9,7 @@
   - https://secure-fjord-21755.herokuapp.com/
 - [ ] ユーザー登録
  - Google oAuth2
+ - API での認証
 - [ ] 見た目の調整
  - Material Design Lite の利用
 - [ ] Markdownで口コミが書ける
@@ -16,7 +17,7 @@
 - [ ] テストを書く
  - rspec
 - [ ] rubocopの導入
-- [ ] CI 
+- [ ] CI
 ----
 
 ## アプリケーション作成の目的
