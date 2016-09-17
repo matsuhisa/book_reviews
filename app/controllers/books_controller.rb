@@ -2,9 +2,8 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:edit, :update, :destroy]
   permits :title, :description, :author, :asin
 
-  # GET /books
-  def index
-    @books = Book.all
+  def index(page=nil)
+    @books = Book.page(page)
   end
 
   # GET /books/1
