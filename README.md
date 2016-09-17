@@ -5,8 +5,6 @@
 # 課題
 
 - [ ] 価値仮説について未記載
-- [x] herokuへのデプロイ
-  - https://secure-fjord-21755.herokuapp.com/
 - [ ] ユーザー登録
  - Google oAuth2
  - API での認証
@@ -18,11 +16,19 @@
  - rspec
 - [ ] rubocopの導入
 - [ ] CI
+- [x] herokuへのデプロイ
+  - https://secure-fjord-21755.herokuapp.com/
 ----
 
 ## アプリケーション作成の目的
 
 - Rails チュートリアル と Rails Girls の間ぐらいで、ウェブアプリケーションを作ってみたい人
+ - 認証
+ - 書く、読む、編集
+ - マークアップ
+ - テスト
+ - 本番公開
+ - 継続すること
 
 # 概要
 
