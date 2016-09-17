@@ -26,6 +26,8 @@ gem 'kaminari'
 gem 'html-pipeline'
 gem 'github-markdown'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
