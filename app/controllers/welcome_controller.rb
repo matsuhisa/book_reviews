@@ -1,5 +1,7 @@
 class WelcomeController < ApplicationController
-  def index
-    @books = Book.all
+
+  def index(page=nil)
+    @books = Book.page(page)
   end
+
 end
