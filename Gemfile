@@ -34,6 +34,11 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-doc', require: false
   gem 'pry-rails'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_rewinder'
+  gem 'test-queue'
 end
 
 group :development do
