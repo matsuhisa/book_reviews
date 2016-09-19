@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
-gem 'rails', '~> 4.2.6'
+gem 'rails', '~> 5.0.0'
 gem 'puma'
 
 gem 'sass-rails'
@@ -29,8 +29,10 @@ gem 'github-markdown'
 gem 'kaminari'
 
 group :development, :test do
+  gem 'rails-controller-testing', require: false
+
   gem 'byebug'
-  gem 'quiet_assets'
+  #gem 'quiet_assets'
   gem 'pry-byebug'
   gem 'pry-doc', require: false
   gem 'pry-rails'
