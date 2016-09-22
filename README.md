@@ -17,7 +17,7 @@
 - [ ] rubocopの導入
 - [ ] CI
 - [x] herokuへのデプロイ
-  - https://secure-fjord-21755.herokuapp.com/
+ - https://secure-fjord-21755.herokuapp.com/
 ----
 
 ## アプリケーション作成の目的
