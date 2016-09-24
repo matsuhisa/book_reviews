@@ -3,28 +3,13 @@
   %head
     %meta{content: "width=device-width,initial-scale=1.0", name: "viewport"}
     %title BookReviews
-    = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
-    = stylesheet_link_tag 'https://code.getmdl.io/1.2.0/material.indigo-pink.min.css'
-    = javascript_include_tag 'https://code.getmdl.io/1.2.0/material.min.js'
     = csrf_meta_tags
   %body
-    .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-      %header.mdl-layout__header
-        .mdl-layout__header-row
-          %span.mdl-layout-title 本棚
-          .mdl-layout-spacer
-          %nav.mdl-navigation.mdl-layout--large-screen-only
-            = link_to "書籍一覧", books_path, class: "mdl-navigation__link"
-            = link_to "口コミ一覧", reviews_path, class: "mdl-navigation__link"
-            - if signed_in?
-              = link_to "sing out", sign_out_path, method: :delete, class: "mdl-navigation__link"
-            - else
-              = link_to "Googleアカウントでサインイン", '/auth/google_oauth2', class: "mdl-navigation__link"
-      .mdl-layout__drawer
-        %span.mdl-layout-title 本棚
-        %nav.mdl-navigation
-          = link_to "書籍一覧", books_path, class: "mdl-navigation__link"
-          = link_to "口コミ一覧", reviews_path, class: "mdl-navigation__link"
-      %main.mdl-layout__content
-        .page-content
-          = yield
+    = link_to "書籍一覧", books_path
+    = link_to "口コミ一覧", reviews_path
+    - if signed_in?
+      = link_to "sing out", sign_out_path, method: :delete
+    - else
+      = link_to "Googleアカウントでサインイン", '/auth/google_oauth2'
+    %main
+      = yield
