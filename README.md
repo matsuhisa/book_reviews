@@ -10,6 +10,7 @@
  - API での認証
 - [ ] 見た目の調整
  - Material Design Lite の利用
+ - Bootstrap
 - [ ] Markdownで口コミが書ける
  - はてな記法っぽいもの
 - [ ] テストを書く
@@ -19,6 +20,7 @@
 - [ ] CI
 - [x] herokuへのデプロイ
  - https://secure-fjord-21755.herokuapp.com/
+
 ----
 
 ## アプリケーション作成の目的
